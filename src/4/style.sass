@@ -1,0 +1,21 @@
+@import "../style"
+
+.visit
+  text-decoration-color: white
+  animation: towhitedec .5s ease-out
+
+.black-b
+  background: black
+  animation: toblack .5s ease-out
+
+@keyframes toblack
+  0%
+    background: transparent
+  100%
+    background: black
+
+@keyframes towhitedec
+  0%
+    text-decoration-color: black
+  100%
+    text-decoration-color: white

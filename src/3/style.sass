@@ -1,0 +1,46 @@
+@import "../style"
+.tc
+  align-items: center
+  justify-content: flex-start
+
+.left
+  align-self: flex-start
+  padding: 40px
+  animation: random-pos1 ease-out infinite 4s
+.right
+  padding: 40px
+  align-self: flex-end
+  animation: random-pos2 ease-out infinite 4s
+.center
+  padding: 40px
+  align-self: center
+  animation: random-pos3 ease-out infinite 4s
+  &:hover
+    content: '123'
+.row-section
+  display: flex
+  justify-content: center
+  width: 100%
+  h1
+    margin: 0
+@for $i from 1 to 4
+  @keyframes random-pos#{$i}
+    @for $i from 1 to 20
+      0%
+        transform: translate(0, 0)
+      #{$i*5}%
+        transform: translate(random(10)*1px, random(10)*1px)
+      100%
+        transform: translate(0, 0)
+
+.large-size
+  font-size: 3em
+  transition: .3s
+  color: $GRAY
+  &:hover
+    display: block
+    @include BACKGROUND_GRADIENT
+    background-attachment: fixed
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    animation-play-state: paused

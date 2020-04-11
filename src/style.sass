@@ -1,0 +1,44 @@
+#holder
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+
+
+$LIGHT_BLUE : #ECFCFC
+$WHITE : #FFFFFF
+$LIGHT_GRAY : #FAFAFA
+$LIGHT_GRAY_2 : #D1D1D1
+$BLACK: #000000
+$GRAY: #454545
+$MEDIUM_GRAY: #D4D4D4
+$MAIN_ORANGE: #4c91c9 //#67584f
+$MAIN_2_ORANGE: #36bbf4
+// Purplish background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
+@mixin WHITE_GRADIENT
+  background-image: linear-gradient(to right, #fff 0%, #fff 100%)
+@mixin TRANSPARENT_GRADIENT
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)
+@mixin BACKGROUND_GRADIENT
+  background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%)
+
+@mixin BACKGROUND_GRADIENT_REV
+  background-image: linear-gradient(to right, #495aff 0%, #0acffe 100%)
+@mixin SECTION_SHADOW
+  box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.5)
+@import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap')
+$DEFAULT_FONT: 'Istok Web', sans-serif
+
+.page-container
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+body
+  font-family: Arial, sans-serif
+  font-size: 14px
+  padding: 0
+  margin: 0
